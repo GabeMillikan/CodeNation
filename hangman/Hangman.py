@@ -1,4 +1,37 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+"""
+
+-create an array
+-print array
+-append to array
+-access index of array
+-get length of array
+-loop thru array
+
+-create string "is an array"
+-access index of string
+-get length of string
+-loop thru letters in string
+-"append" to string (+=)
+
+
+-on each iteration of string, print if letter.isalpha()
+-print letter.lower()/.upper()
+
+-compare each letter to 'h' or 'e'
+-make a class that prints input
+-only accepts 1 letter
+-only accepts alphabetical
+
+-class stores all the letters that you pressed
+-removes duplicates
+
+g
+
+"""
+
+hi = 'hi'
+
+
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
@@ -59,17 +92,17 @@ class Word():
     
         guess = input("guess a letter: ")
         if not guess.isalpha():
-            print("please only enter letters!")
+            print("\nplease only enter letters!\n")
             return
         if not len(guess):
-            print("you gotta enter something")
+            print("\nyou gotta enter something\n")
             return
         if len(guess) > 1:
-            print("Please only enter one letter")
+            print("\nPlease only enter one letter\n")
             return
         
         if self.already_guessed(guess):
-            print("You already guessed that!")
+            print("\nYou already guessed that!\n")
             return            
             
         self.guessed_letters.append(guess)
@@ -93,7 +126,7 @@ class Word():
         return False
             
             
-round = Word("1: One, 2: Two, 3: Three")
+round = Word("Example 'word' with spaces and punctuation.")
 finished = False
 while not finished:
     finished = round.play()
